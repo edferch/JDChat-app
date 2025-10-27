@@ -1,0 +1,91 @@
+/* Reseteo básico y fuente */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal de la App */
+.App {
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+  max-height: 800px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Ventana de mensajes */
+.chat-window {
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  overflow-y: auto; /* Permite scroll si hay muchos mensajes */
+  padding: 1rem;
+  background-color: #e5ddd5; /* Fondo tipo WhatsApp */
+}
+
+.message-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada burbuja de mensaje */
+.message {
+  background-color: #dcf8c6; /* Verde claro tipo WhatsApp */
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  max-width: 70%;
+  word-wrap: break-word;
+  /* Por ahora todos los mensajes salen de un lado */
+  align-self: flex-end; 
+}
+
+/* Formulario de envío */
+.message-form {
+  display: flex;
+  padding: 0.75rem;
+  background-color: #f0f2f5; /* Gris claro de fondo */
+  border-top: 1px solid #ddd;
+}
+
+.message-input {
+  flex-grow: 1;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.message-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff; /* Resalte azul al enfocar */
+}
+
+.send-button {
+  background-color: #007bff; /* Azul */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.send-button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
